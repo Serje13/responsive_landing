@@ -1,0 +1,387 @@
+.form-container {
+    background: #222222;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+    border:0px;
+    padding:50px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.field-wraper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.input-wr {
+    width: 100%;
+    height: auto;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.input-container-button {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+input {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 36px;
+    font-family: Fira Sans;
+    max-width: 450px;
+    max-height: 85px;
+    position: relative;
+}
+
+.inputs {
+    margin: 20px 0px 20px 0px;
+    width: 60%; 
+    min-height: 50px;
+    background: #131313; 
+    text-align: left;
+    border: solid #131313 0.3px;
+    color:  rgba(255, 255, 255, 0.5);
+    padding-left: 40px;
+    outline: none;
+}
+.load-button:hover {
+    cursor: pointer;
+}
+
+.section-topic{
+    font-size: 40px;
+    line-height: 48px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.topic-part {
+    color:#FFA800;
+}
+.inputs:focus {
+    outline: none;
+    background: #131313;
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.inputs:focus::placeholder  {
+    color:inherit;
+}
+.file-input {
+    display: none;
+}
+
+.submit {
+    width: 20%; 
+    height: 50px;
+    background: #131313;
+    border: 1px solid #FFA800;
+    color: #FFFFFF;
+    align-items: center;
+    padding: 0px;
+    margin: 20px 0px 20px 0px;
+}
+.submit-disable {
+    opacity: 0.5;
+    width: 20%; 
+    height: 50px;
+    background: #131313;
+    border: 1px solid #FFA800;
+    color: #FFFFFF;
+    align-items: center;
+    padding: 0px;
+    margin: 20px 0px 20px 0px;
+}
+.submit-disable:hover {
+    cursor: pointer;
+}
+
+.submit-button-text, .submit-button-disable-text {
+    font-weight: bold;
+    font-size:18px;
+}
+
+.submit:hover {
+    background-color: #FFA800;
+    cursor: pointer;
+}
+.submit:focus {
+    outline: none;
+}
+.err {
+    border: solid red 0.1px;
+}
+.err-style{
+    color: red;
+    max-width: 450px;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    padding-left: 15px;
+    font-size: 12px
+}
+#phone {
+    background: url("/assets/telef.png") no-repeat 100%, url("/assets/telefSmallPart.png") no-repeat 100%,url("/assets/telefBigPart.png") no-repeat 100%;
+    background-size: 20px, 10px, 13px;
+    background-position: 10px center, 18px 15px, 19px 11px;
+    background-color: #131313;
+}
+
+#sv {
+    background: url("/assets/sv.png") no-repeat 100%;
+    background-size: 25px;
+    background-position: 10px center;
+    background-color: #131313;
+}
+#email {
+    background: url("/assets/email.png") no-repeat 100%;
+    background-size: 25px;
+    background-position: 10px center;
+    background-color: #131313;
+}
+#inp-name {
+    background: url("/assets/nameImage.png") no-repeat 100%, url("/assets/nameSercle.png") no-repeat 100%, url("/assets/nameHalfSercle.png") no-repeat 100%, url("/assets/nameSmallLine.png") no-repeat 100%, url("/assets/nameLongLine.png") no-repeat 100%;
+    background-size: 26px, 8px, 12px, 10px, 19px;
+    background-position: 10px center, 19px 14px, 17px 23px, 18px 33px, 14px 35px;
+    background-color: #131313;
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+   
+    .err-style {
+        width: 100%;
+        height: auto;
+        font-size: 12px;
+        left:0 !important;
+        padding-left: 5px;
+    } 
+       
+    .form-container {
+        padding: 20px;
+        font-size: 16px;
+        line-height: 19px;
+    } 
+    .form {
+        flex-direction: column;
+        align-items: center;
+        max-width: 450px;
+    } 
+    .section-topic {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+          
+    }
+    .inputs {
+        height: 50px; 
+        width: 100%;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 20px 0px 20px 0px;
+        padding-left: 45px;
+
+    }
+    ::placeholder { 
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .submit-button-text,.submit-button-disable-text {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px; 
+    }
+    .submit  {
+        width: 100%;
+        height: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+    .submit-disable {
+        width: 100%;
+        height: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+    .input-container {
+        max-width: 450px;
+        height: auto;
+        flex-direction: column;
+    }
+    .field-wraper {
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width: 768px) and (min-width: 480px) { 
+
+    .form,.input-container,.field-wraper {
+        flex-direction: column;
+    }
+
+    .form  {
+        width: 70%;
+    }
+    .submit{
+        width: 70%;
+        height: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+    .submit-disable  {
+        width: 70%;
+        height: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+    .inputs {
+        height: 50px; 
+        width: 100%;
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 45px;
+    }
+    .err-style {
+        width: 100%;
+        height: auto;
+        font-size: 12px;
+        left:0 !important;
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) { 
+    .err-style {
+        width: 70%;
+        font-size: smaller;
+    }
+    .inputs  {
+        width: 70%;
+    }
+    .submit {
+        width: 30%;
+    }
+    .submit-disable { 
+        width: 30%;
+    }
+}
+@media screen and (width: 768px) and (height: 1024px) { 
+    .err-style {
+        width: 100%;
+        font-size: smaller;
+        text-align: left;
+    }
+    .submit {
+        width: 50%;
+    }
+    .submit-disable {
+        width: 50%;
+    }
+    .inputs {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1600px) { 
+    .inputs {
+        height: 85px;
+        padding-left: 60px;
+        font-size: 30px;
+        line-height: 36px;
+        &#phone {
+            background-size: auto, auto, auto;
+            background-position: 10px center, 27px 28px, 29px 20px;
+            background-color: #131313;
+        }
+        &#sv, &#email { 
+            background-size: 40px;
+        }
+        &#inp-name { 
+            background-size: auto, 17px, 22px, 18px, 29px;
+            background-position: 10px center, 22px 24px, 20px 39px, 22px 55px, 17px 60px;
+        }
+    }
+    ::placeholder { 
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .err-style {
+        max-width: 450px;
+    }
+    .submit {
+        width: 400px;
+        font-size: 30px;
+        line-height: 36px;
+        height: 85px;
+    }
+    .submit-disable {
+        width: 400px;
+        font-size: 30px;
+        line-height: 36px;
+        height: 85px; 
+    }
+    .submit-button-text,.submit-button-disable-text { 
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .err-style {
+        width: 70%;
+    }
+    .form-container {
+        padding: 50px 200px 50px 200px;;
+    }
+}
+
+@media screen and (min-width: 1920px) {  
+    .form-container {
+        padding: 50px 300px 50px 300px;;
+    }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1024px) { 
+    .err-style {
+        width: 50%;
+        font-size: 12px;
+        text-align: left;
+    }
+    .submit {
+        width: 20%;
+    }
+    .submit-disable {
+        width: 20%;
+    }
+    .inputs {
+        width: 50%;
+    }
+}
+
+
+

@@ -1,0 +1,25 @@
+{
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "files.associations": {
+        "*.css": "postcss"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 0,
+    "eslint.autoFixOnSave": true,
+    "eslint.provideLintTask": true,
+    "eslint.packageManager": "yarn",
+    "explorer.confirmDragAndDrop": false,
+    "javascript.validate.enable":false,
+    "flow.useNPMPackagedFlow": false,
+    "explorer.confirmDelete": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "debug.node.autoAttach": "on",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "eslint.alwaysShowStatus": true,
+    "eslint.workingDirectories": [
+        "./client", "./server"
+    ]
+}

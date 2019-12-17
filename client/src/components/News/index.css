@@ -1,0 +1,218 @@
+.news-wraper {
+    margin: 0px;
+    padding:50px;
+    width: 100%;
+    height: auto;
+    background: #272729;
+    color: #FFFFFF;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    text-align: center;
+}
+.carousel-container {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    padding: 0px 50px 0px 50px;
+}
+.slider {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+.item {
+    position: relative;
+    text-align: center; 
+    max-width: 300px;  
+    max-height: 200px; 
+}
+.item:focus {
+    outline: none;
+}
+
+.carousel-image {
+    height: auto;
+    margin: auto;
+    max-width: 300px; 
+}
+
+.item-container:hover .carousel-image { 
+    opacity: 0.3;
+}
+
+.item-container:hover .hidden {
+    display: block;
+    opacity: 1;
+    .body {
+       opacity: 0.7;
+   }
+}
+#arrow {
+    height: 50px;
+    width: 30px;
+}
+.hidden {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text-container {
+    max-width: 300px;
+    height: auto; 
+    position: absolute;
+    text-align: left;
+    top: 45%;
+    left: 45%;
+    transform: translate(-45%, -45%);
+}
+.item-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.name {
+    font-size: 40px;
+    line-height: 48px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+   
+}
+.topic {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 20px 0px 20px 0px;
+    
+}
+.body {
+    color: #FFFFFF;
+    margin: 20px 0px 20px 0px;
+}
+.news-date {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFA800;
+    margin: 20px 0px 20px 0px;
+}
+
+ @media screen and (min-width: 1024px) and (min-height: 900px) {
+    .news-wraper {
+        padding: 20px;
+    }
+    .carousel-container {
+        padding: 0px 20px 0px 20px;
+    }
+   
+    .hidden {
+        display: block;
+    } 
+} 
+
+@media screen and (max-width: 1024px) and (max-height: 1366px) {
+    .carousel-container {
+        padding: 0px 20px 0px 20px;
+    }
+   
+    .hidden {
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) and (min-width: 320px) {
+    .news-wraper {
+        padding: 20px 20px 28px 20px;
+    }
+    .text-container {
+        top: 30%;
+        left: 30%;
+        transform: translate(-30%, -30%);
+    }
+    .carousel-container {
+        padding: 0px;
+    }
+    .carousel-image {
+        width: 100%;
+        height: auto; 
+        margin: auto;
+    }
+    #arrow {
+        height: 30px;
+        width: 15px;
+    }
+    .name {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .topic,.news-date {
+        margin: 10px 0px 10px 0px;
+        
+    }
+    .body {
+        margin: 10px 0px 10px 0px;
+        opacity: 0.7;
+    }
+    .carousel-image { 
+        opacity: 0.3;
+    }
+    .item { 
+        width: 100%;
+        height: auto;
+    }
+    .carousel-container {
+        width: 100%;
+        height: auto;
+        margin: 0px;
+        padding: 0px 20px 0px 20px;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 600px) { 
+    #arrow {
+        height: 30px;
+        width: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+    .hidden {
+        display: block;
+        top: 30%;
+        left: 30%;
+        transform: translate(-30%, -30%);
+    }
+    .text-container {
+        top: 30%;
+        left: 30%;
+        transform: translate(-30%, -30%);
+    }
+    .news-wraper {
+        padding: 20px;
+    }
+    .carousel-container {
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 450px) { 
+    .carousel-container { 
+        padding: 0px 70px 0px 70px;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 500px) { 
+    .carousel-container { 
+        padding: 0px 110px 0px 110px;
+    }
+}
