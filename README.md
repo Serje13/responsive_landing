@@ -1,6 +1,6 @@
 Resposive landing 
 
-Technologies:
+Technologies: 
 
 Client: React.js, Axios, react-accessible-accordion, react-slick, bundler: Webpack
 
@@ -18,3 +18,9 @@ Accomplished tasks:
  - upload files to filesysteme
  - sending response to client
  - simple handling server response 
+
+What need to do to run the project:
+- send the pull request to this repo
+- go to clien directory (yarn install)
+- in another terminal go to server directory (yarn install)
+- in both terminals "yarn start"
