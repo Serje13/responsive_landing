@@ -14,3 +14,7 @@ Accomplished tasks:
  - mobile view
  - form validating with error handling
  - sending data to server
+ - validating sended files on server side(mime tipe, size, file existence)
+ - upload files to filesysteme
+ - sending response to client
+ - simple handling server response 
