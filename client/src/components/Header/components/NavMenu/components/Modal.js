@@ -11,8 +11,8 @@ export const Modal = (props) => {
                 Контакты
             </div>
             <div className="modal-p-wraper">
-                <p className="modal-p-body">г. Днепр ул. Симферопольская</p>
-                <p className="modal-p-body">+38 063 119 62 09</p>
+                <p className="modal-p-body">г. Днепр ул. Улица</p>
+                <p className="modal-p-body">+38 099 999 99 99</p>
             </div>
             <div className="modal-logo-wraper">
                 <img className="modal-logo" src={props.logoImage} />

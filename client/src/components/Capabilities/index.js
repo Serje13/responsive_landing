@@ -11,12 +11,13 @@ export default class Capabilities extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: true
+            show: true,
+            showImage: true
         };
     }
     // export const Capabilities = (props) => {
     render() {
-        const {show} = this.state;
+        const { show } = this.state;
         return (
             <div className="container" >
                 <div className="block-container">

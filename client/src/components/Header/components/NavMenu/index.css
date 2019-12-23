@@ -51,6 +51,7 @@
     background-color: #222222;
     border: 1px solid #FFA800;
     box-sizing: border-box;
+    outline: none;
 }
 .head-but:hover{
     cursor: pointer;
@@ -152,6 +153,12 @@
   
 .display-none {
     display: none;
+}
+.link-style {
+    text-decoration: none;
+    color: inherit;
+    height: 100%; 
+    width: auto;
 }
 
 @media screen and (max-width: 800px) and (min-width: 320px) { 

@@ -1,9 +1,10 @@
 import React from "react";
 import close from "../../../../../assets/X.png";
 import popImg from "../../../../../assets/logo.png";
-import {Modal} from "./components/Modal";
-import {navigate_links, hidden_menu_items} from "./constants";
-import {Menu} from "./components/HiddenMenu";
+import { Modal } from "./components/Modal";
+import { navigate_links, hidden_menu_items } from "./constants";
+import { Menu } from "./components/HiddenMenu";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 
@@ -17,14 +18,14 @@ export default class NavMenu extends React.Component {
     }
 
     openMenu = () => {
-        this.setState({isMenuOpened: true});
+        this.setState({ isMenuOpened: true });
         const elements = document.getElementsByClassName("block");
         for (let i = 0; i < elements.length; i++) {
             elements[i].style.display = "none";
         }
     }
     closeMenu = () => {
-        this.setState({isMenuOpened: false});
+        this.setState({ isMenuOpened: false });
         const elements = document.getElementsByClassName("block");
         for (let i = 0; i < elements.length; i++) {
             elements[i].style.display = "block";
@@ -49,7 +50,7 @@ export default class NavMenu extends React.Component {
                                 {showHideMenu && <div className="hidden-list" onMouseLeave={this.closeMenu}>
                                     <Menu items={hidden_menu_items} />
                                 </div>}
-                            </div>) : (<div key={i} className="menu-item">{l.title}</div>)
+                            </div>) : (<Link key={i} to={l.link} className="link-style"><div key={i} className="menu-item">{l.title}</div></Link>)
                     ))}
                 </div>
                 <button className="head-but" onClick={this.toggleModal}>Контакты</button>

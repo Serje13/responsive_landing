@@ -1,9 +1,53 @@
-export const navigate_links = [
+import front from "../../../../../assets/frontendDev4.png";
+import front1 from "../../../../../assets/frontendDev3.png";
+import qa from "../../../../../assets/QA1.png";
+import qa1 from "../../../../../assets/qa2.png";
+import wp from "../../../../../assets/wordpressDev.jpg";
+import wp1 from "../../../../../assets/wordpressDev1.png";
+import net from "../../../../../assets/netDev.jpg";
+import java from "../../../../../assets/javaDev1.png";
+import java1 from "../../../../../assets/javaDev.png";
+
+
+const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+const content = [
     {
-        title: "О нас"
+        title: "The Role:",
+        body: lorem
     },
     {
-        title: "Новости"
+        title: "Key Skills & Experience:",
+        body: lorem
+    },
+    {
+        title: "About You:",
+        body: lorem
+    },
+    {
+        title: "Bonus Qualifications:",
+        body: lorem
+    },
+    {
+        title: "Benefits:",
+        body: lorem
+    },
+    {
+        title: "Key Responsibilities:",
+        body: lorem
+    },
+    {
+        title: "About Us:",
+        body: lorem
+    }
+];
+export const navigate_links = [
+    {
+        title: "О нас",
+        link: "/about"
+    },
+    {
+        title: "Новости",
+        link: "/news"
     },
     {
         title: "Вакансии"
@@ -11,18 +55,33 @@ export const navigate_links = [
 ];
 export const hidden_menu_items = [
     {
-        title: "Front-end developer"
+        id: 1,
+        title: "Front-end developer",
+        image: [front, front1, front],
+        description: content
     },
     {
-        title: "QA Automation"
+        id: 2,
+        title: "QA Automation",
+        image: [qa, qa1, qa],
+        description: content
     },
     {
-        title: "Wordpress developer"
+        id: 3,
+        title: "Wordpress developer",
+        image: [wp1, wp, wp1],
+        description: content
     },
     {
-        title: ".NET Developer"
+        id: 4,
+        title: ".NET Developer",
+        image: [net, net, net],
+        description: content
     },
     {
-        title: "Java Developer"
+        id: 5,
+        title: "Java Developer",
+        image: [java1, java, java1],
+        description: content
     }
 ];

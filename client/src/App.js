@@ -1,18 +1,23 @@
 import React from "react";
-import {Header} from "./components/Header";
-import Capabilities from "./components/Capabilities";
-import {MobileCapabilities} from "./components/Capabilities/components/CapabilitiesMobile";
-import {News} from "./components/News";
-import Form from "./components/Form";
-import {Footer} from "./components/Footer";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { MainContainer } from "./components/container/Container";
+import { Router } from "react-router";
+import { getRoutes } from "../routes";
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
 
 export const App = () => (
-    <div className="app">
-        <Header />
-        <Capabilities />
-        <MobileCapabilities />
-        <News />
-        <Form />
-        <Footer />
-    </div>
+    <Router history={history}>
+        <div className="app">
+            <Header />
+            <React.Fragment>
+                {
+                    getRoutes()
+                }
+            </React.Fragment>
+            <Footer />
+        </div>
+    </Router>
 );

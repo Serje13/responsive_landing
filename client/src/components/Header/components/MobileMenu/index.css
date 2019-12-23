@@ -40,6 +40,19 @@
     line-height: 19px;
     position: relative;
 }
+.my-class-button-menu-click {
+    padding: 5px 20px 5px 20px;
+    background-color: #222222;
+    color: #F9F9F9;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: #F9F9F9;
+    font-size: 16px;
+    line-height: 19px;
+    position: relative;
+}
 .my-class-button-menu::after {
     content: ">";
     transform: rotate(90deg);
@@ -47,8 +60,19 @@
     display: block;
     height: 6px;
     width: 10px;
-    left: 46px;
+    left: 47px;
     top:13px;
+    position: absolute;
+    width: 100%;
+}
+.my-class-button-menu-click::after  {
+    content: ">";
+    text-align: center;
+    display: block;
+    height: 6px;
+    width: 10px;
+    left: 44px;
+    top:7px;
     position: absolute;
     width: 100%;
 }

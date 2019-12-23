@@ -1,7 +1,7 @@
 import React from "react";
 import close_but from "../../../../../assets/burger-close.png";
-import {navigate_links} from "../NavMenu/constants";
-import {Modal} from "../NavMenu/components/Modal";
+import { navigate_links } from "../NavMenu/constants";
+import { Modal } from "../NavMenu/components/Modal";
 import {
     Accordion,
     AccordionItem,
@@ -11,7 +11,8 @@ import {
 } from "react-accessible-accordion";
 import close from "../../../../../assets/X.png";
 import popImg from "../../../../../assets/logo.png";
-import {hidden_menu_items} from "../NavMenu/constants";
+import { hidden_menu_items } from "../NavMenu/constants";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 export default class MobileMenu extends React.Component {
@@ -20,6 +21,7 @@ export default class MobileMenu extends React.Component {
         this.state = {
             isMenuOpened: false,
             isModalOpened: false,
+            buttonStatus: false
         };
     }
 
@@ -31,8 +33,13 @@ export default class MobileMenu extends React.Component {
             isModalOpened: !prevState.isModalOpened
         }));
     }
+    toggleButtonStatus = () => {
+        this.setState(prevState => ({
+            buttonStatus: !prevState.buttonStatus
+        }));
+    }
     render() {
-        const {isModalOpened} = this.state;
+        const { isModalOpened, buttonStatus } = this.state;
         return (
             <div className="mobile-menu-wraper" >
                 <div className="mobile-menu-image-wraper">
@@ -40,25 +47,27 @@ export default class MobileMenu extends React.Component {
                 </div>
                 <div className="links-wraper">
                     {navigate_links.map((link, i) => (
-                        link.title === "Новости" ? (<Accordion key={i} allowZeroExpanded={true} >
+                        link.title === "Вакансии" ? (<Accordion key={i} allowZeroExpanded={true} onChange={this.toggleButtonStatus}>
                             <AccordionItem>
                                 <AccordionItemHeading >
-                                    <AccordionItemButton className="my-class-button-menu">
+                                    <AccordionItemButton className={buttonStatus === true ? "my-class-button-menu-click" : "my-class-button-menu"}>
                                         {link.title}
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
                                 <AccordionItemPanel className="acc-panel-menu" >
                                     <div className="item-link-content-wr">
                                         {hidden_menu_items.map((item, i) => (
-                                            <div className="p-item-content" key={i}>
-                                                {item.title}
-                                            </div>
+                                            <Link key={i} to={`/vacancy/${item.id}`} className="link-style" onClick={this.toggleItself}>
+                                                <div className="p-item-content" key={i}>
+                                                    {item.title}
+                                                </div>
+                                            </Link>
                                         ))}
                                     </div>
                                 </AccordionItemPanel>
                             </AccordionItem>
                         </Accordion>) :
-                            (<div className="link" key={i}>{link.title}</div>)
+                            (<Link key={i} to={link.link} className="link-style" onClick={this.toggleItself}><div className="link" key={i}>{link.title}</div></Link>)
                     ))}
                 </div>
                 <div>

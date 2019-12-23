@@ -1,0 +1,26 @@
+.about-page {
+    width: 100%;
+    height: auto;
+    background: #1F1D2A;
+    color: #FFFFFF;
+    align-items: center;
+    padding: 50px;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-content-container {
+    width: 100%;
+    height: auto;
+    border: solid #FFA800;
+    border-width: 0.5px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.about-content-p { 
+    margin: 20px 0px 20px 0px;
+    text-align: left;
+}

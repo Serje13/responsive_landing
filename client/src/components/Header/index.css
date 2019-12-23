@@ -9,6 +9,7 @@
     justify-content: space-around;
     align-items: center;
     font-family: Fira Sans;
+    padding: 10px 0px 10px 0px;
 }
 
 @media screen and (max-width: 800px) and (min-width: 320px) { 

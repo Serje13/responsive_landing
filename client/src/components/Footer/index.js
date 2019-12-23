@@ -6,8 +6,8 @@ import "./index.css";
 export const Footer = () => (
     <div className="footer-container">
         <div >
-            <p className="footer-p">г. Днепр ул. Симферопольская</p>
-            <p className="footer-p">+38 063 119 62 09</p>
+            <p className="footer-p">г. Днепр ул. Улица</p>
+            <p className="footer-p">+38 099 999 99 99</p>
         </div>
         <div className="footer-image-wraper">
             <img className="footer-image" src={image} alt="" />
