@@ -6,8 +6,8 @@ export const Menu = (props) => {
     return (
         <div className="ul-container">
             {props.items.map((item, i) => (
-                <Link key={i} to={`/vacancy/${item.id}`} className="link-style" {...props}>
-                    <div key={i} className="list-item">{item.title}</div>
+                <Link id={item.id} key={i} to={`/vacancy/${item.id}`} className="link-style">
+                    <div key={i} className={props.location.pathname === `/vacancy/${item.id}` ? "active-list-item" : "list-item"}>{item.title}</div>
                 </Link>
             ))}
         </div>

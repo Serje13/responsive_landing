@@ -1,19 +1,22 @@
 import React from "react";
 import NavMenu from "./components/NavMenu";
-import {Logo} from "../Logo";
+import { Logo } from "../Logo";
 import MobileHeader from "./components/MobileHeader";
+import { withRouter } from "react-router";
 
 
 import "./index.css";
 
-export const Header = (props) => {
+const HeaderComponent = (props) => {
     return (
         <React.Fragment>
             <div className="header" >
                 <Logo />
                 <NavMenu {...props} />
             </div>
-            <MobileHeader />
+            <MobileHeader {...props} />
         </React.Fragment>
     );
 };
+
+export const Header = withRouter(HeaderComponent);

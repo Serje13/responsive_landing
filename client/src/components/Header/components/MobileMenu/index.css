@@ -27,6 +27,10 @@
 .link {
     margin: 15px;
 }
+.link-active-mob {
+    margin: 15px;
+    color: #FFA800;
+}
 .my-class-button-menu {
     padding: 5px 20px 5px 20px;
     background-color: #222222;
@@ -109,3 +113,11 @@
     padding-left: 100px;
 }
 
+.p-item-content-active {
+    margin-top: 0px;
+    margin-bottom: 11px;
+    width: 300px;
+    text-align: left;
+    padding-left: 100px;
+    color: #FFA800;
+}

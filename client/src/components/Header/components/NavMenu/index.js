@@ -13,7 +13,7 @@ export default class NavMenu extends React.Component {
         super(props);
         this.state = {
             open: false,
-            isMenuOpened: false
+            isMenuOpened: false,
         };
     }
 
@@ -37,6 +37,9 @@ export default class NavMenu extends React.Component {
             open: !prevState.open
         }));
     }
+    componentWillUnmount = () => {
+        this.setState({ activeLink: null });
+    }
     render() {
         const showHide = this.state.open;
         const showHideMenu = this.state.isMenuOpened;
@@ -48,9 +51,9 @@ export default class NavMenu extends React.Component {
                             (<div key={i} className="menu-item-container">
                                 <div key={i} className="menu-item" onMouseEnter={this.openMenu} >{l.title}</div >
                                 {showHideMenu && <div className="hidden-list" onMouseLeave={this.closeMenu}>
-                                    <Menu items={hidden_menu_items} />
+                                    <Menu items={hidden_menu_items} {...this.props} />
                                 </div>}
-                            </div>) : (<Link key={i} to={l.link} className="link-style"><div key={i} className="menu-item">{l.title}</div></Link>)
+                            </div>) : (<Link id={l.id} key={i} to={l.link} className="link-style"><div id={l.id} key={i} className={l.link === this.props.location.pathname ? "active-item" : "menu-item"}>{l.title}</div></Link>)
                     ))}
                 </div>
                 <button className="head-but" onClick={this.toggleModal}>Контакты</button>

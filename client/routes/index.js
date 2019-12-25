@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { App } from "../src/App";
+// import { App } from "../src/App";
 import { NotFound } from "../src/components/NotFound/index";
 import { MainContainer } from "../src/components/container/Container";
 import { About } from "../src/components/About/About";
@@ -37,12 +37,6 @@ export const getRoutes = () => {
                 path='/'
                 component={(routeProps) => <App {...routeProps} />}
             /> */}
-            {/* <Route
-                    exact={true}
-                    path='/catalogue/:catalogueId'
-                    component={(routeProps) => <Catalogue {...routeProps} />}
-                /> */}
-
             <Route
                 exact={false}
                 path='*'

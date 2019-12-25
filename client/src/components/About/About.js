@@ -5,7 +5,7 @@ import "./index.css";
 
 export const About = () => (
     <div className="about-page">
-        <div style={{ fontSize: "40px", color: "#FFA800", fontWeight: "bold" }}>About Us</div>
+        <div className="about-topic">About Us</div>
         <div className="about-content-container">
             {about.map((item, i) => (
                 <div key={i}>

@@ -33,7 +33,7 @@ export default class MobileHeader extends React.Component {
                             <img className="burger-image" src={burger} onClick={this.toggleMenu} />
                         </div>
                     </div>}
-                    {isMenuOpened && <div className="mobile-menu-container"><MobileMenu closeMenu={this.toggleMenu} /></div>}
+                    {isMenuOpened && <div className="mobile-menu-container"><MobileMenu closeMenu={this.toggleMenu} {...this.props} /></div>}
                 </div>
             </div>
         );

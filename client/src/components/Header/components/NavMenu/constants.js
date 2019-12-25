@@ -42,14 +42,17 @@ const content = [
 ];
 export const navigate_links = [
     {
+        id: 1,
         title: "О нас",
         link: "/about"
     },
     {
+        id: 2,
         title: "Новости",
         link: "/news"
     },
     {
+        id: 3,
         title: "Вакансии"
     }
 ];

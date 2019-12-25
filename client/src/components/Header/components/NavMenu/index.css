@@ -30,6 +30,25 @@
     cursor: pointer;
     }
 }
+.active-item {
+    position: relative;
+    width: auto;
+    color: #FFA800;
+    width: auto;
+    cursor: pointer;
+    &::after { 
+    content: "";
+    text-align: center;
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: #FFA800;
+    width: 100%;
+    cursor: pointer;
+    }
+    
+}
 .item-wraper {
     width: 330px;
     display: flex;
@@ -79,6 +98,10 @@
 .list-item:hover {
     color: #FFA800;
     cursor: pointer;
+}
+.active-list-item  {
+    margin: 15px 0px 15px 0px;
+    color: #FFA800;
 }
 .hidden-list {
     padding: 20px;

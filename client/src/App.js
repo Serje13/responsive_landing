@@ -8,10 +8,10 @@ import { createBrowserHistory } from "history";
 
 const history = createBrowserHistory();
 
-export const App = () => (
+export const App = (props) => (
     <Router history={history}>
         <div className="app">
-            <Header />
+            <Header {...props} />
             <React.Fragment>
                 {
                     getRoutes()

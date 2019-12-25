@@ -26,7 +26,7 @@ export const Vacancy = (props) => {
                                 {c.description.map((item, i) => (
                                     <React.Fragment key={i}>
                                         <p className="item-description-topic">{item.title}</p>
-                                        <p>{item.body}</p>
+                                        <p className="vacancy-body-p">{item.body}</p>
                                     </React.Fragment>
                                 ))}
                             </div>
